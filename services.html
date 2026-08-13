@@ -1,274 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Grow Digital</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing & Web Development Services | Grow Digital</title>
+  <meta name="description" content="Explore Grow Digital's full-suite services: Google Ads, Meta Ads, Website Development, SEO, Graphic Design, Social Media Marketing, Bulk SMS, and Video Editing.">
+  <link rel="canonical" href="https://growdigital.com/services.html">
 
-    <link rel="stylesheet" href="services.css">
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Services | Grow Digital Agency">
+  <meta property="og:description" content="Explore our full-suite services: Google Ads, Meta Ads, Website Development, SEO, Graphic Design, and Video Editing.">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:url" content="https://growdigital.com/services.html">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Favicon & Fonts -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Digital Marketing & Web Development",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Grow Digital",
+      "telephone": "+917989222741"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Grow Digital Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Ads & Paid Social" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Website Development" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Search Engine Optimization (SEO)" } }
+      ]
+    }
+  }
+  </script>
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header>
+<!-- ====== HEADER ====== -->
+<header id="mainHeader">
+  <a href="index.html" class="logo" aria-label="Grow Digital Homepage">
+    <img src="images/logo.png" alt="Grow Digital Logo" width="165" height="42">
+  </a>
 
-    <div class="logo">
-        <img src="images/logo.png" alt="Grow Digital Logo">
-    </div>
+  <nav id="mainNav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <nav>
+  <div class="header-social-links">
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/917989222741" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  </div>
 
-        <ul>
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="about.html">About</a></li>
-
-            <li><a href="services.html" class="active">Services</a></li>
-
-            <li><a href="portfolio.html">Portfolio</a></li>
-
-            <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-
-    </nav>
-
+  <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </div>
 </header>
 
+<main id="main-content">
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
+  <!-- ====== HERO ====== -->
+  <section class="hero">
     <div class="hero-content">
+      <span class="page-tag">What We Offer</span>
+      <h1>Comprehensive Digital Services</h1>
+      <p>
+        Data-driven marketing, high-performance web development, and creative strategies
+        designed to accelerate business revenue.
+      </p>
+    </div>
+  </section>
 
-        <h1>Our Services</h1>
-
-        <p>
-            We provide innovative digital marketing solutions
-            that help businesses grow faster and reach more customers online.
-        </p>
-
+  <!-- ====== SERVICES GRID ====== -->
+  <section class="services">
+    <div class="section-header">
+      <span class="section-tag reveal">Full-Service Agency</span>
+      <h2 class="reveal">Everything Your Business Needs To Scale</h2>
+      <p class="reveal">End-to-end execution from creative strategy to high-converting ad management.</p>
     </div>
 
-</section>
+    <div class="service-grid stagger">
 
-<!-- ================= SERVICES ================= -->
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fab fa-google"></i></div>
+        <h3>Google Ads (PPC)</h3>
+        <p>Target active buyers with optimized Google Search, Display, Shopping, and YouTube Video campaigns for maximum return on ad spend.</p>
+      </div>
 
-<section class="services">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fab fa-meta"></i></div>
+        <h3>Meta Ads</h3>
+        <p>Scale brand reach and acquire high-intent leads using AI-targeted Facebook &amp; Instagram advertising engines.</p>
+      </div>
 
-    <h2>Our Services</h2>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Website Development</h3>
+        <p>Custom-built, ultra-fast, mobile-responsive business websites designed with SEO best practices and conversion psychology.</p>
+      </div>
 
-    <div class="service-box">
-        <div class="service-inner">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-pen-ruler"></i></div>
+        <h3>Graphic Design &amp; Branding</h3>
+        <p>High-impact brand logos, marketing posters, social graphics, and corporate guidelines that establish market presence.</p>
+      </div>
 
-            <div class="front">
-                <img src="images/GOOGLE.png" alt="Google Ads">
-                <h3>Google Ads</h3>
-            </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+        <h3>Search Engine Optimization (SEO)</h3>
+        <p>Dominate Google search results and capture qualified organic traffic with data-backed technical and local SEO strategies.</p>
+      </div>
 
-            <div class="back">
-                <h3>Google Ads</h3>
-                <p>
-                    Generate high-quality leads using Google Search,
-                    Display and Shopping campaigns.
-                </p>
-            </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-share-nodes"></i></div>
+        <h3>Social Media Marketing</h3>
+        <p>Organic content calendar planning, graphic posts, engagement growth, and community management across platforms.</p>
+      </div>
 
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-comment-sms"></i></div>
+        <h3>Bulk SMS Services</h3>
+        <p>High-deliverability SMS marketing for instant customer updates, promotional deals, and transactional notifications.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-landmark"></i></div>
+        <h3>Political Digital Marketing</h3>
+        <p>Constituency data analytics, voter engagement strategies, and targeted digital campaign management.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
+        <h3>App Development</h3>
+        <p>Native &amp; Cross-Platform Android &amp; iOS mobile apps built with modern UI/UX, fast APIs, and offline capabilities.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-film"></i></div>
+        <h3>Video Editing &amp; Motion Graphics</h3>
+        <p>High-retention Reels, YouTube Shorts, promotional ad edits, and motion graphic assets designed to hook viewers.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== PROCESS SECTION ====== -->
+  <section class="services" style="background:#f0f7ff;">
+    <div class="section-header">
+      <span class="section-tag reveal">How We Work</span>
+      <h2 class="reveal">Our Proven 4-Step Process</h2>
+      <p class="reveal">A structured approach that guarantees quality, transparency, and measurable results.</p>
+    </div>
+
+    <div class="service-grid stagger">
+      <div class="service-card reveal" style="text-align:center;">
+        <div class="service-icon"><i class="fas fa-comments"></i></div>
+        <h3>1. Discovery &amp; Audit</h3>
+        <p>We analyze your business, current digital presence, target market, and competition to spot growth opportunities.</p>
+      </div>
+
+      <div class="service-card reveal" style="text-align:center;">
+        <div class="service-icon"><i class="fas fa-chess"></i></div>
+        <h3>2. Strategic Roadmap</h3>
+        <p>We design a custom execution plan outlining target KPIs, ad budgets, design specs, and timeline benchmarks.</p>
+      </div>
+
+      <div class="service-card reveal" style="text-align:center;">
+        <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>3. Execution &amp; Launch</h3>
+        <p>Our team builds your assets, crafts high-converting copy, launches campaigns, and pushes your website live.</p>
+      </div>
+
+      <div class="service-card reveal" style="text-align:center;">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>4. Optimization &amp; Scale</h3>
+        <p>Continuous A/B testing, budget optimization, and transparent performance reporting to maximize your return.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ SECTION ====== -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag reveal">Got Questions?</span>
+      <h2 class="reveal">Service FAQs</h2>
+      <p class="reveal">Common questions regarding our service execution, packages, and deliverables.</p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item reveal">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <span>Do you offer custom package bundles?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-    </div>
-
-    <div class="service-box">
-        <div class="service-inner">
-
-            <div class="front">
-                <img src="images/META.png" alt="Meta Ads">
-                <h3>Meta Ads</h3>
-            </div>
-
-            <div class="back">
-                <h3>Meta Ads</h3>
-                <p>
-                    Reach your audience through Facebook and
-                    Instagram advertising campaigns.
-                </p>
-            </div>
-
+        <div class="faq-answer">
+          <p>Yes! We often combine Website Development with Google/Meta Ads and SEO management to create an all-in-one growth engine tailored to your monthly budget.</p>
         </div>
-    </div>
+      </div>
 
-    <div class="service-box">
-        <div class="service-inner">
-
-            <div class="front">
-                <img src="images/WEB DEVELOPMENT.png" alt="">
-                <h3>Website Development</h3>
-            </div>
-
-            <div class="back">
-                <h3>Website Development</h3>
-                <p>
-                    Modern, responsive and SEO-friendly websites
-                    designed to grow your business.
-                </p>
-            </div>
-
+      <div class="faq-item reveal">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <span>Who owns the website code and ad accounts?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-    </div>
-
-    <div class="service-box">
-        <div class="service-inner">
-
-            <div class="front">
-                <img src="images/graphic design.jpg" alt="">
-                <h3>Graphic Design</h3>
-            </div>
-
-            <div class="back">
-                <h3>Graphic Design</h3>
-                <p>
-                    Professional logo design, posters,
-                    brochures and branding materials.
-                </p>
-            </div>
-
+        <div class="faq-answer">
+          <p>You retain 100% ownership of your website domain, codebase, hosting accounts, and ad account assets. We operate with complete transparency.</p>
         </div>
-    </div>
+      </div>
 
-    <div class="service-box">
-        <div class="service-inner">
-
-            <div class="front">
-                <img src="images/SEO.jpg" alt="">
-                <h3>SEO</h3>
-            </div>
-
-            <div class="back">
-                <h3>SEO</h3>
-                <p>
-                    Improve your Google rankings and
-                    increase organic website traffic.
-                </p>
-            </div>
-
+      <div class="faq-item reveal">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <span>How do we track campaign performance?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-    </div>
-
-    <div class="service-box">
-        <div class="service-inner">
-
-            <div class="front">
-                <img src="images/SOCIAL.png" alt="">
-                <h3>Social Media Marketing</h3>
-            </div>
-
-            <div class="back">
-                <h3>Social Media Marketing</h3>
-                <p>
-                    Build your brand through engaging
-                    social media content and paid campaigns.
-                </p>
-            </div>
-
+        <div class="faq-answer">
+          <p>We provide regular performance reports showing real-time metrics including impressions, clicks, lead volume, cost per acquisition (CPA), and conversion rates.</p>
         </div>
+      </div>
     </div>
+  </section>
 
-    <div class="service-box">
-        <div class="service-inner">
+  <!-- ====== CTA ====== -->
+  <section class="cta">
+    <h2 class="reveal">Ready To Elevate Your Business?</h2>
+    <p class="reveal">Let's build a customized digital solution that generates continuous leads and sales.</p>
+    <a href="contact.html" class="btn reveal"><i class="fas fa-paper-plane"></i> Get Free Consultation</a>
+  </section>
 
-            <div class="front">
-                <img src="images/bulk sms.jpg" alt="Bulk SMS Services">
-                <h3>Bulk SMS Services</h3>
-            </div>
+</main>
 
-            <div class="back">
-                <h3>Bulk SMS Service</h3>
-                <p>
-                    Reach targeted customers instantly with promotional
-                    and transactional SMS campaigns.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-        <div class="service-box">
-        <div class="service-inner">
-
-            <div class="front">
-                <img src="images/ppp.jpg" alt="Political Digital Marketing">
-                <h3>Political Digital Marketing Services</h3>
-            </div>
-
-            <div class="back">
-                <h3>Political Digital Marketing Services</h3>
-                <p>
-                    Strategic digital campaigning, sentiment analysis,
-                    targeted ads, and voter reach.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-        <div class="service-box">
-        <div class="service-inner">
-
-            <div class="front">
-                <img src="images/vedio.png" alt="Video Editing">
-                <h3>Video Editing</h3>
-            </div>
-
-            <div class="back">
-                <h3>Video Editing</h3>
-                <p>
-                    Reels, YouTube Thumbnails, Shorts, Motion Graphics,
-                    and Promotional Videos.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-</section>
-
-<!-- ================= CTA ================= -->
-
-<section class="cta">
-
-    <h2>Ready to Grow Your Business?</h2>
-
-    <p>
-        Let's work together to build your online presence,
-        generate quality leads, and increase your sales.
-    </p>
-
-    <a href="contact.html" class="btn">Contact Us</a>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
+<!-- ====== FOOTER ====== -->
 <footer>
-
-    <p>© 2026 Grow Digital | All Rights Reserved.</p>
-
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Grow Digital Logo" class="footer-logo" width="165" height="42" loading="lazy">
+      <p>A full-service digital marketing agency dedicated to empowering businesses through targeted campaigns, custom web development, and innovative design.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>Bhadrachalam, Telangana, India</span></div>
+      <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+917989222741" style="color:rgba(255,255,255,0.7); text-decoration:none;">+91 79892 22741</a></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@growdigital.com" style="color:rgba(255,255,255,0.7); text-decoration:none;">info@growdigital.com</a></div>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <span>© 2026 Grow Digital | All Rights Reserved.</span>
+    <span>Designed with <i class="fas fa-heart" style="color:#ef4444;"></i> in India</span>
+  </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
+
 </body>
 </html>

@@ -1,139 +1,91 @@
-// Select Elements
-const cards = document.querySelectorAll(".card");
-const lightbox = document.getElementById("lightbox");
-const popupImage = document.getElementById("popupImage");
-const closeBtn = document.querySelector(".close");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+/* ==========================================================================
+   GROW DIGITAL — CLIENTS GALLERY & LIGHTBOX ENGINE (portfolio.js)
+   ========================================================================== */
 
-let images = [];
-let currentIndex = 0;
-let autoSlide;
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-// Open Gallery
-cards.forEach(card => {
+  // 1. FILTER TABS HANDLER
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.portfolio-card[data-category], .card[data-category]');
 
-    card.addEventListener("click", function () {
+  if (filterBtns.length > 0 && cards.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Active state
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
 
-        // Get images from data-images
-        images = this.dataset.images
-            .split(",")
-            .map(img => img.trim());
+        const filter = btn.getAttribute('data-filter');
 
-        currentIndex = 0;
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 20);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  }
 
-        popupImage.src = images[currentIndex];
+  // 2. LIGHTBOX HANDLER
+  const lightboxModal = document.getElementById('lightboxModal') || document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg') || document.getElementById('popupImage');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose') || document.getElementById('lbClose');
+  const triggers = document.querySelectorAll('.lightbox-trigger');
 
-        lightbox.style.display = "flex";
+  if (lightboxModal && lightboxImg && triggers.length > 0) {
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-        startAutoSlide();
+        const imgSrc = trigger.getAttribute('href');
+        const card = trigger.closest('.portfolio-card, .card');
+        const title = card ? (card.querySelector('h3')?.textContent || '') : '';
 
+        lightboxImg.src = imgSrc;
+        if (lightboxCaption) lightboxCaption.textContent = title;
+
+        lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
     });
 
-});
+    const closeLightbox = () => {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
 
-// Show Image
-function showImage() {
-
-    popupImage.src = images[currentIndex];
-
-}
-
-// Next
-function nextImage() {
-
-    currentIndex++;
-
-    if (currentIndex >= images.length) {
-
-        currentIndex = 0;
-
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', closeLightbox);
     }
 
-    showImage();
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        closeLightbox();
+      }
+    });
 
-}
-
-// Previous
-function prevImage() {
-
-    currentIndex--;
-
-    if (currentIndex < 0) {
-
-        currentIndex = images.length - 1;
-
-    }
-
-    showImage();
-
-}
-
-// Auto Slide
-function startAutoSlide() {
-
-    clearInterval(autoSlide);
-
-    autoSlide = setInterval(() => {
-
-        nextImage();
-
-    }, 3000);
-
-}
-
-// Next Button
-nextBtn.addEventListener("click", function (e) {
-
-    e.stopPropagation();
-
-    nextImage();
-
-    startAutoSlide();
-
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
 });
-
-// Previous Button
-prevBtn.addEventListener("click", function (e) {
-
-    e.stopPropagation();
-
-    prevImage();
-
-    startAutoSlide();
-
-});
-
-// Close Button
-closeBtn.addEventListener("click", closeGallery);
-
-// Click Outside
-lightbox.addEventListener("click", function (e) {
-
-    if (e.target === lightbox) {
-
-        closeGallery();
-
-    }
-
-});
-
-// ESC Key
-document.addEventListener("keydown", function (e) {
-
-    if (e.key === "Escape") {
-
-        closeGallery();
-
-    }
-
-});
-
-// Close Gallery
-function closeGallery() {
-
-    lightbox.style.display = "none";
-
-    clearInterval(autoSlide);
-
-}
