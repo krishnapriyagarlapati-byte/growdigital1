@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.classList.toggle('active', isOpen);
       mainNav.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
     };
 
     hamburger.addEventListener('click', () => toggleMenu());
